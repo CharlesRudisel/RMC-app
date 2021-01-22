@@ -1,11 +1,12 @@
 .main{
     display: grid;
     //background-color: #1D2A39;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: .42fr 4fr .75fr;
 
     grid-template-areas:  
     "nav"
     "body"
+    "blank"
    ;
 
     margin: auto;
@@ -26,16 +27,36 @@
 }
 
 .contain{
-    justify-content: center;
-    margin-top: 30%;
+    position: relative;
 }
 
-.btn{
+#btn1{
     
-   
-    width: 30%;
-    height: 10px;
-    border: 3px solid green;
-    padding: 5%;
+    width: 300px;
+  height: 80px;
+  background-color: #465ED4;
+  /* Center vertically and horizontally */
+  position: absolute;
+  top: 150%;
+  left: 33%;
+  margin: -25px 0 0 -25px; /* apply negative top and left margins to truly center the element */
 
+}
+
+#btn2{
+    
+    width: 300px;
+  height: 80px;
+  background-color: #593CE9;
+  /* Center vertically and horizontally */
+  position: absolute;
+  top: 300%;
+  left: 33%;
+  margin: -25px 0 0 -25px; /* apply negative top and left margins to truly center the element */
+
+}
+
+#blank{
+    background-color: white;
+    grid-area: blank;
 }
