@@ -1,0 +1,50 @@
+.main{
+    display: grid;
+    background-color: #1D2A39;
+    grid-template-rows: 1fr 3fr 1fr 1fr 1fr 1fr;
+
+    grid-template-areas:  
+    "nav"
+    "hero"
+    "menu1"
+    "menu2"
+    "menu3"
+    "menu4";
+
+    margin: auto;
+    width: 50%;
+    height: 100vh;
+    border: 3px solid #1D2A39;
+    //padding: 10px;
+}
+
+#nav{
+
+    
+}
+
+#hero{
+
+    //position: relative;
+   
+}
+
+#menu1{
+
+    background-color: #164F90;
+}
+
+#menu2{
+    
+    background-color: #2C8243;
+}
+
+#menu3{
+    
+    background-color: #9052BF;
+}
+
+#menu4{
+    
+    background-color: #D47C41;
+}
