@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
 import { EstimatePage1Component } from './estimate-page1/estimate-page1.component';
 import { EstimateTwoComponent } from './estimate-two/estimate-two.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { EstimateTwoComponent } from './estimate-two/estimate-two.component';
       {path:'', component:HomeComponent},
       {path:'one',component:EstimatePage1Component},
       {path:'two', component:EstimateTwoComponent}
-    ])
+    ]),
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

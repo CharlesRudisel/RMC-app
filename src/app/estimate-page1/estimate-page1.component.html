@@ -7,49 +7,107 @@
         <div class="contain">
             <h1 style="text-align: left; margin-top: 8%; margin-left: 7.5%;">Visit Information</h1>
             <p style="text-align: left; margin-left: 7.5%;">Please complete the information below</p>
-           
+
             <form>
                 <div class="col-auto my-1">
                     <label class="mr-sm-2" for="inlineFormCustomSelect">Facility*</label>
                     <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                      <option selected>Choose...</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
+                        <option selected>Choose...</option>
+                        <option value="1">St.Rudisel West</option>
+                        <option value="2">St. Rudisel's Children's Hospital</option>
+                        <option value="3">Mount Rudisel's Baptist Medical Center</option>
+                        <option value="4">University Medical Center East</option>
+                        <option value="5">Rudisel Cancer Institute</option>
                     </select>
-                  </div>
+                </div>
 
                 <div class="col-auto my-1">
                     <label class="mr-sm-2" for="inlineFormCustomSelect">Visit Type*</label>
                     <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                      <option selected>Choose...</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
+                        <option selected>Choose...</option>
+                        <option value="1">Outpatient</option>
+                        <option value="2">Inpatient</option>
+
                     </select>
-                  </div>
+                </div>
 
                 <div class="col-auto my-1">
                     <label class="mr-sm-2" for="inlineFormCustomSelect">Procedure Catergory*</label>
-                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                      <option selected>Choose...</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
+                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" (change)="open(content)">
+                        <option selected>Choose...</option>
+                        <option value="1" (click)="open(content)">Appendectomy</option>
+                        <option value="2">Breast biopsy</option>
+                        <option value="3">Cataract surgery</option>
+                        <option value="4">Cesarean section</option>
+                        <option value="5">Coronary artery bypass</option>
+                        <option value="6">Free skin graft</option>
+                        <option value="7">Hysterectomy</option>
+                        <option value="8">Inguinal hernia repair</option>
+                        <option value="9">Low back pain surgery</option>
+                        <option value="10">Partial colectomy</option>
+                        <option value="11">Prostatectomy</option>
+                        <option value="12">Tonsillectomy</option>
                     </select>
-                  </div>
-               
-               <br>
-                <div class="form-group row" style="margin-left:.5%;"> 
-                    <div class="col-sm-10">
-                        <button type="submit" class="btn btn-primary">Sign in</button>
-                    </div>
                 </div>
+
+
             </form>
-        
-        
-        
-        
+
+
+            <ng-template #content let-modal>
+                <div class="modal-header">
+                    <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+                    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="dateOfBirth">Date of birth</label>
+
+                            <div class="form-check">
+                                <fieldset class="form-group">
+                                    <div class="row">
+                                      <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
+                                      <div class="col-sm-10">
+                                        <div class="form-check">
+                                          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                                          <label class="form-check-label" for="gridRadios1">
+                                            First radio
+                                          </label>
+                                        </div>
+                                        <div class="form-check">
+                                          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                                          <label class="form-check-label" for="gridRadios2">
+                                            Second radio
+                                          </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                                            <label class="form-check-label" for="gridRadios2">
+                                              Second radio
+                                            </label>
+                                          </div>
+                                      </div>
+                                    </div>
+                                  </fieldset>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+                </div>
+            </ng-template>
+
+
+
+            <hr>
+
+            <pre>{{ closeResult }}</pre>
+
         </div>
     </div>
     <div id="blank">
