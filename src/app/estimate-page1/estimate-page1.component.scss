@@ -1,0 +1,70 @@
+.main{
+    display: grid;
+    //background-color: #1D2A39;
+    grid-template-rows: .42fr 4fr .75fr;
+
+    grid-template-areas:  
+    "nav"
+    "body"
+    "blank"
+   ;
+
+    margin: auto;
+    width: 50%;
+    height: 100vh;
+    border: 3px solid #1D2A39;
+    //padding: 10px;
+}
+
+#nav{
+    //background:blue;
+    grid-area: nav;
+}
+
+#body{
+    background-color: #A8D3E9;
+    grid-area: body;
+}
+
+.contain{
+    position: relative;
+}
+
+#btn1{
+    
+    width: 300px;
+  height: 80px;
+  background-color: #465ED4;
+  /* Center vertically and horizontally */
+  position: absolute;
+  top: 150%;
+  left: 33%;
+  margin: -25px 0 0 -25px; /* apply negative top and left margins to truly center the element */
+
+}
+
+#btn2{
+    
+    width: 300px;
+  height: 80px;
+  background-color: #593CE9;
+  /* Center vertically and horizontally */
+  position: absolute;
+  top: 300%;
+  left: 33%;
+  margin: -25px 0 0 -25px; /* apply negative top and left margins to truly center the element */
+
+}
+
+#blank{
+    background-color: white;
+    grid-area: blank;
+}
+
+form{
+
+    margin: auto;
+  width: 85%;
+  border: 3px solid green;
+  padding: 10px;
+}

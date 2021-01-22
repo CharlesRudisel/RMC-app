@@ -1,14 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
+import { EstimatePage1Component } from './estimate-page1/estimate-page1.component';
 import {EstimateStartComponent} from './estimate-start/estimate-start.component';
+import { EstimateTwoComponent } from './estimate-two/estimate-two.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
 
-  {
-    path:'est-start',
-    component:EstimateStartComponent
-  }
+  {path:'', component:HomeComponent},
+  {path:'est-start', component:EstimateStartComponent},
+  {path:'one',component:EstimatePage1Component},
+  {path:'two', component:EstimateTwoComponent}
+
 ];
 
 @NgModule({
@@ -16,3 +19,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+//export const routingComponents = [EstimatePage1Component, EstimateTwoComponent]
