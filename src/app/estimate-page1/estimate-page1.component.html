@@ -129,7 +129,7 @@
             <hr>
 
             <div class="service-container">
-                <p  *ngFor="let x of y">
+                <p  *ngFor="let x of y" (click)="remove(x.toString())">
                     {{x.toString()}}
                 </p>
             </div>

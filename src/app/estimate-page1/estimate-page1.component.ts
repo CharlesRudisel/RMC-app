@@ -43,6 +43,14 @@ export class EstimatePage1Component implements OnInit {
     console.log(this.y.length)
   }
 
+  remove(x:String){
+
+    const index = this.y.indexOf(x);
+      if (index > -1) {
+        this.y.splice(index, 1);
+      }
+  }
+
 
   open(content) {
     this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
