@@ -49,10 +49,8 @@
                         <option value="12">Tonsillectomy</option>
                     </select>
                 </div>
-
-
             </form>
-
+            <!-------------------------------------Modal----------------------------------------------------------------------------------->
 
             <ng-template #content let-modal>
                 <div class="modal-header">
@@ -61,55 +59,52 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
+                <!--Modal Body-->
                 <div class="modal-body">
                     <form>
-                        <div class="form-group">
-                            <label for="dateOfBirth">Date of birth</label>
-
+                        
+                        <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
+                        <div class="col-sm-10">
+                            
+                           
                             <div class="form-check">
-                                <fieldset class="form-group">
-                                    <div class="row">
-                                      <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
-                                      <div class="col-sm-10">
-                                        <div class="form-check">
-                                          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-                                          <label class="form-check-label" for="gridRadios1">
-                                            First radio
-                                          </label>
-                                        </div>
-                                        <div class="form-check">
-                                          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-                                          <label class="form-check-label" for="gridRadios2">
-                                            Second radio
-                                          </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-                                            <label class="form-check-label" for="gridRadios2">
-                                              Second radio
-                                            </label>
-                                          </div>
-                                      </div>
-                                    </div>
-                                  </fieldset>
+                                <input type="checkbox" name="checkbox1" (change)="toggleEditable($event)" [value]="12345">
+                                <label class="form-check-label" for="defaultCheck1">        
+                                    Default checkbox
+                                </label>
+                            </div>
+                            
+                            <div class="form-check">
+                                <input type="checkbox" name="checkbox2" (change)="toggleEditable($event)" [value]="6789">
+                                <label class="form-check-label" for="defaultCheck1">        
+                                    Default checkbox
+                                </label>
                             </div>
 
+                             <div class="form-check">
+                                <input type="checkbox" name="checkbox3" (change)="toggleEditable($event)" [value]="1011121314">
+                                <label class="form-check-label" for="defaultCheck1">        
+                                    Default checkbox
+                                </label>
+                            </div>
                         </div>
                     </form>
                 </div>
+                <!--Modal footer-->
+
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
                 </div>
             </ng-template>
 
-
+            <!------------------------------------------------------------------------------------------------------------------------>
 
             <hr>
-
-            <pre>{{ closeResult }}</pre>
-
+            <pre>{{ x.toString() }}</pre>
         </div>
     </div>
+
+
     <div id="blank">
         <div class="btn btn-success" style="margin-top: 5%; margin-left: 5%;" routerLink="">
             Back
