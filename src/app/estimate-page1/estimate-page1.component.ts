@@ -9,7 +9,8 @@ import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 export class EstimatePage1Component implements OnInit {
   closeResult = '';
 
-  x =[];
+  x = [];
+  y = [];
 
 
   constructor(private modalService: NgbModal) { }
@@ -21,11 +22,25 @@ export class EstimatePage1Component implements OnInit {
 
   toggleEditable(event: any) {
 
-    if(event.target.checked == true){
+    if (event.target.checked == true) {
       this.x.push(event.target.value)
     }
-    console.log(event.target.name, event.target.value, event.target.checked);
-    console.log(this.x);
+
+    if (event.target.checked == false) {
+      const index = this.x.indexOf(event.target.value);
+      if (index > -1) {
+        this.x.splice(index, 1);
+      }
+    }
+    console.log(this.x.toString())
+
+  }
+
+  display() {
+    for (let i = 0; i < this.x.length; i++) {
+      this.y.push(this.x[i])
+    }
+    console.log(this.y.length)
   }
 
 
@@ -38,6 +53,7 @@ export class EstimatePage1Component implements OnInit {
   }
 
   private getDismissReason(reason: any): string {
+
     if (reason === ModalDismissReasons.ESC) {
       return 'by pressing ESC';
     } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {

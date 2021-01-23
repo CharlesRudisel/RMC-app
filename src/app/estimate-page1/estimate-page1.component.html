@@ -93,14 +93,15 @@
                 <!--Modal footer-->
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+                    <button type="button" class="btn btn-outline-dark" (click)="display()" (click)="modal.close('Save click')">Save</button>
                 </div>
             </ng-template>
 
             <!------------------------------------------------------------------------------------------------------------------------>
 
             <hr>
-            <pre>{{ x.toString() }}</pre>
+
+            <pre>{{ y.toString() }}</pre>
         </div>
     </div>
 
