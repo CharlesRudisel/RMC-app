@@ -5,7 +5,7 @@
     </div>
     <div id="body">
         <div class="contain">
-            <h1 style="text-align: left; margin-top: 8%; margin-left: 7.5%;">Visit Information</h1>
+            <h1 style="text-align: left; margin-top: 2%; margin-left: 7.5%;">Visit Information</h1>
             <p style="text-align: left; margin-left: 7.5%;">Please complete the information below</p>
 
             <form>
@@ -62,28 +62,54 @@
                 <!--Modal Body-->
                 <div class="modal-body">
                     <form>
-                        
+
                         <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
                         <div class="col-sm-10">
-                            
-                           
+
+
                             <div class="form-check">
-                                <input type="checkbox" name="checkbox1" (change)="toggleEditable($event)" [value]="12345">
-                                <label class="form-check-label" for="defaultCheck1">        
-                                    Default checkbox
-                                </label>
-                            </div>
-                            
-                            <div class="form-check">
-                                <input type="checkbox" name="checkbox2" (change)="toggleEditable($event)" [value]="6789">
-                                <label class="form-check-label" for="defaultCheck1">        
+                                <input type="checkbox" name="checkbox1" (change)="toggleEditable($event)"
+                                    [value]="12345">
+                                <label class="form-check-label" for="defaultCheck1">
                                     Default checkbox
                                 </label>
                             </div>
 
-                             <div class="form-check">
-                                <input type="checkbox" name="checkbox3" (change)="toggleEditable($event)" [value]="1011121314">
-                                <label class="form-check-label" for="defaultCheck1">        
+                            <div class="form-check">
+                                <input type="checkbox" name="checkbox2" (change)="toggleEditable($event)"
+                                    [value]="6789">
+                                <label class="form-check-label" for="defaultCheck1">
+                                    Default checkbox
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="checkbox" name="checkbox3" (change)="toggleEditable($event)"
+                                    [value]="1011121314">
+                                <label class="form-check-label" for="defaultCheck1">
+                                    Default checkbox
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" name="checkbox1" (change)="toggleEditable($event)"
+                                    [value]="12345">
+                                <label class="form-check-label" for="defaultCheck1">
+                                    Default checkbox
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="checkbox" name="checkbox2" (change)="toggleEditable($event)"
+                                    [value]="6789">
+                                <label class="form-check-label" for="defaultCheck1">
+                                    Default checkbox
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="checkbox" name="checkbox3" (change)="toggleEditable($event)"
+                                    [value]="1011121314">
+                                <label class="form-check-label" for="defaultCheck1">
                                     Default checkbox
                                 </label>
                             </div>
@@ -93,7 +119,8 @@
                 <!--Modal footer-->
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-dark" (click)="display()" (click)="modal.close('Save click')">Save</button>
+                    <button type="button" class="btn btn-outline-dark" (click)="display()"
+                        (click)="modal.close('Save click')">Save</button>
                 </div>
             </ng-template>
 
@@ -101,7 +128,13 @@
 
             <hr>
 
-            <pre>{{ y.toString() }}</pre>
+            <div class="service-container">
+                <p  *ngFor="let x of y">
+                    {{x.toString()}}
+                </p>
+            </div>
+
+
         </div>
     </div>
 

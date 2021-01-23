@@ -1,7 +1,7 @@
 .main{
     display: grid;
     //background-color: #1D2A39;
-    grid-template-rows: .42fr 4fr .75fr;
+    grid-template-rows: .42fr 4fr .5fr;
 
     grid-template-areas:  
     "nav"
@@ -67,4 +67,18 @@ form{
   width: 85%;
   border: 3px solid green;
   padding: 10px;
+}
+
+.service-container{
+    width: 100%;
+    display: flexbox;
+    overflow: scroll; 
+    //border: solid 1px red; 
+    margin-top: -1.5%;
+    position: absolute;
+}
+
+.service-container p{
+
+    display: inline-flex; margin: 5px; border:solid 1px red; padding: 1px;
 }
