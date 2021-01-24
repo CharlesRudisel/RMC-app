@@ -12,6 +12,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { EstimateThreeComponent } from './estimate-three/estimate-three.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { FinalEstimateComponent } from './final-estimate/final-estimate.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
     HomeComponent,
     EstimatePage1Component,
     EstimateTwoComponent,
-    EstimateThreeComponent
+    EstimateThreeComponent,
+    FinalEstimateComponent
   ],
   imports: [
     BrowserModule,

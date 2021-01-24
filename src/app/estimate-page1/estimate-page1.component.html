@@ -8,9 +8,9 @@
             <h1 style="text-align: left; margin-top: 2%; margin-left: 7.5%;">Visit Information</h1>
             <p style="text-align: left; margin-left: 7.5%;">Please complete the information below</p>
 
-            <form>
+            <form class="card">
                 <div class="col-auto my-1">
-                    <label class="mr-sm-2" for="inlineFormCustomSelect">Facility*</label>
+                    <label class="mr-sm-2" for="inlineFormCustomSelect" style="color:blue; font-weight: 500;">Facility*</label>
                     <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
                         <option selected>Choose...</option>
                         <option value="1">St.Rudisel West</option>
@@ -22,7 +22,7 @@
                 </div>
 
                 <div class="col-auto my-1">
-                    <label class="mr-sm-2" for="inlineFormCustomSelect">Visit Type*</label>
+                    <label class="mr-sm-2" for="inlineFormCustomSelect" style="color:blue; font-weight: 500;">Visit Type*</label>
                     <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
                         <option selected>Choose...</option>
                         <option value="1">Outpatient</option>
@@ -32,7 +32,7 @@
                 </div>
 
                 <div class="col-auto my-1">
-                    <label class="mr-sm-2" for="inlineFormCustomSelect">Procedure Catergory*</label>
+                    <label class="mr-sm-2" for="inlineFormCustomSelect" style="color:blue; font-weight: 500;">Procedure Catergory*</label>
                     <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" (change)="getCat($event)" (change)="open(content)">
                         <option selected>Choose...</option>
                         <option value="1">Appendectomy</option>
@@ -91,7 +91,7 @@
             <hr>
 
             <div class="service-container">
-                <p  *ngFor="let x of uniqueChars" (click)="remove(x.toString())">
+                <p class="card" style="background-color: #4B8CD5; color: white;" *ngFor="let x of uniqueChars" (click)="remove(x.toString())">
                     {{x.toString()}}
                 </p>
             </div>

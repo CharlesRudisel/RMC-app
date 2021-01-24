@@ -8,9 +8,9 @@
             <h1 style="text-align: left; margin-top: 2%; margin-left: 7.5%;">Patient Information</h1>
             <p style="text-align: left; margin-left: 7.5%;">Please complete the information below</p>
 
-            <form>
+            <form class="card">
                 <div class="col-auto my-1">
-                    <label class="mr-sm-2" for="inlineFormCustomSelect">First Name*</label>
+                    <label class="mr-sm-2" for="inlineFormCustomSelect" style="color:blue; font-weight: 500;">First Name*</label>
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                         placeholder="Enter email">
                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
@@ -18,7 +18,7 @@
                 </div>
 
                 <div class="col-auto my-1">
-                    <label class="mr-sm-2" for="inlineFormCustomSelect">Last Name*</label>
+                    <label class="mr-sm-2" for="inlineFormCustomSelect" style="color:blue; font-weight: 500;">Last Name*</label>
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                         placeholder="Enter email">
                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
@@ -26,10 +26,14 @@
                 </div>
 
                 <div class="col-auto my-1">
-                    <label class="mr-sm-2" for="inlineFormCustomSelect">Date of Birth*</label>
+                    <label class="mr-sm-2" for="inlineFormCustomSelect" style="color:blue; font-weight: 500;">Date of Birth*</label>
+                    <br>
                     <input type="text" ngbDatepicker #d="ngbDatepicker" />
                     <div class="btn btn-success" (click)="d.toggle()" style="height: 20px; padding-bottom: 5%; margin-left:5px">Date</div>
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                        else.</small>
                 </div>
+                
             </form>
             <!-------------------------------------Modal----------------------------------------------------------------------------------->
 
