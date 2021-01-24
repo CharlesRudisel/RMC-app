@@ -19,6 +19,7 @@ export class EstimatePage1Component implements OnInit {
   ngOnInit(): void {
     throw new Error('Method not implemented.');
   }
+  
 
   toggleEditable(event: any) {
 
@@ -49,6 +50,10 @@ export class EstimatePage1Component implements OnInit {
       if (index > -1) {
         this.y.splice(index, 1);
       }
+  }
+
+  getCat(event:any){
+    console.log(event.target.value)
   }
 
 
