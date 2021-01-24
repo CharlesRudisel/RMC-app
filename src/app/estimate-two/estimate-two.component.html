@@ -11,31 +11,24 @@
             <form>
                 <div class="col-auto my-1">
                     <label class="mr-sm-2" for="inlineFormCustomSelect">First Name*</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                        else.</small>
                 </div>
 
                 <div class="col-auto my-1">
                     <label class="mr-sm-2" for="inlineFormCustomSelect">Last Name*</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                        else.</small>
                 </div>
 
                 <div class="col-auto my-1">
-                    <label class="mr-sm-2" for="inlineFormCustomSelect">Procedure Catergory*</label>
-                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect"  >
-                        <option selected>Choose...</option>
-                        <option value="1">Appendectomy</option>
-                        <option value="2">Biopsy</option>
-                        <option value="3">Hysterectomy</option>
-                        <option value="4">Cataract surgery</option>    
-                        <option value="5">Coronary artery bypass</option>
-                        <option value="6">Free skin graft</option>
-                        <option value="7">Tonsillectomy</option>
-                        <option value="8">Hernia repair</option>
-                        <option value="9">Back pain surgery</option>
-                        
-                    </select>
+                    <label class="mr-sm-2" for="inlineFormCustomSelect">Date of Birth*</label>
+                    <input type="text" ngbDatepicker #d="ngbDatepicker" />
+                    <div class="btn btn-success" (click)="d.toggle()" style="height: 20px; padding-bottom: 5%; margin-left:5px">Date</div>
                 </div>
             </form>
             <!-------------------------------------Modal----------------------------------------------------------------------------------->
@@ -43,11 +36,11 @@
             <ng-template #content let-modal>
                 <div class="modal-header">
                     <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
-                    <button type="button" class="close" aria-label="Close" >
+                    <button type="button" class="close" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                
+
                 <!--Modal Body-->
                 <div class="modal-body">
                     <form>
@@ -57,22 +50,20 @@
 
 
                             <div *ngFor="let x of z" class="form-check">
-                                <input type="checkbox" name="checkbox1" 
-                                    [value]="x">
+                                <input type="checkbox" name="checkbox1" [value]="x">
                                 <label class="form-check-label" for="defaultCheck1">
                                     {{x}}
                                 </label>
                             </div>
 
-                           
+
                         </div>
                     </form>
                 </div>
                 <!--Modal footer-->
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-dark"
-                        (click)="modal.close('Save click')">Save</button>
+                    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
                 </div>
             </ng-template>
 
@@ -81,7 +72,7 @@
             <hr>
 
             <div class="service-container">
-                <p >
+                <p>
                 </p>
             </div>
 

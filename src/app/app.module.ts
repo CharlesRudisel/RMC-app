@@ -10,6 +10,9 @@ import { EstimatePage1Component } from './estimate-page1/estimate-page1.componen
 import { EstimateTwoComponent } from './estimate-two/estimate-two.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { EstimateThreeComponent } from './estimate-three/estimate-three.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+
 
 @NgModule({
   declarations: [
@@ -28,9 +31,11 @@ import { EstimateThreeComponent } from './estimate-three/estimate-three.componen
       {path:'one',component:EstimatePage1Component},
       {path:'two', component:EstimateTwoComponent}
     ]),
-    NgbModule
+    NgbModule,
+    BrowserAnimationsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
