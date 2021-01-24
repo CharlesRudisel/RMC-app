@@ -5,20 +5,30 @@
     </div>
     <div id="body">
         <div class="contain">
-            <h1 style="text-align: left; margin-top: 2%; margin-left: 7.5%;">Patient Information</h1>
+            <h1 style="text-align: left; margin-top: 2%; margin-left: 7.5%;">Insurance Information</h1>
             <p style="text-align: left; margin-left: 7.5%;">Please complete the information below</p>
 
             <form>
                 <div class="col-auto my-1">
-                    <label class="mr-sm-2" for="inlineFormCustomSelect">First Name*</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    <label class="mr-sm-2" for="inlineFormCustomSelect">Facility*</label>
+                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                        <option selected>Choose...</option>
+                        <option value="1">St.Rudisel West</option>
+                        <option value="2">St. Rudisel's Children's Hospital</option>
+                        <option value="3">Mount Rudisel's Baptist Medical Center</option>
+                        <option value="4">University Medical Center East</option>
+                        <option value="5">Rudisel Cancer Institute</option>
+                    </select>
                 </div>
 
                 <div class="col-auto my-1">
-                    <label class="mr-sm-2" for="inlineFormCustomSelect">Last Name*</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    <label class="mr-sm-2" for="inlineFormCustomSelect">Visit Type*</label>
+                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                        <option selected>Choose...</option>
+                        <option value="1">Outpatient</option>
+                        <option value="2">Inpatient</option>
+
+                    </select>
                 </div>
 
                 <div class="col-auto my-1">
@@ -96,7 +106,7 @@
         </div>
 
 
-        <div class="btn btn-primary" style="margin-top: 5%; margin-left: 500px;" routerLink="/three">
+        <div class="btn btn-primary" style="margin-top: 5%; margin-left: 500px;" routerLink="">
             Next
         </div>
     </div>

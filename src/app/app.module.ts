@@ -9,6 +9,7 @@ import { RouterModule } from '@angular/router';
 import { EstimatePage1Component } from './estimate-page1/estimate-page1.component';
 import { EstimateTwoComponent } from './estimate-two/estimate-two.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { EstimateThreeComponent } from './estimate-three/estimate-three.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     EstimateStartComponent,
     HomeComponent,
     EstimatePage1Component,
-    EstimateTwoComponent
+    EstimateTwoComponent,
+    EstimateThreeComponent
   ],
   imports: [
     BrowserModule,
