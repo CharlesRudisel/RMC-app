@@ -35,7 +35,7 @@ export class EstimatePage1Component implements OnInit {
 
 
   getCat(event: any) {
-    console.log(event.target.value)
+    //console.log(event.target.value)
 
     switch (event.target.value) {
 
@@ -118,8 +118,26 @@ export class EstimatePage1Component implements OnInit {
     if (index > -1) {
       this.uniqueChars.splice(index, 1);
     }
+   /* if (index > -1) {
+      this.z.splice(index, 1);
+    }
+    */
+    if (index > -1) {
+      this.x.splice(index, 1);
+    }
+    if (index > -1) {
+      this.y.splice(index, 1);
+    }
+
+    this.uniqueChars = [...new Set(this.uniqueChars)];
+    this.x = [...new Set(this.x)];
+    this.y = [...new Set(this.y)];
+    //this.z = [...new Set(this.z)];
 
     console.log(this.uniqueChars.toString())
+    console.log(this.x.toString())
+    console.log(this.y.toString())
+   // console.log(this.z.toString())
   }
 
 
