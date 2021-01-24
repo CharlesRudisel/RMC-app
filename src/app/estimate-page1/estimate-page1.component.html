@@ -36,17 +36,15 @@
                     <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" (change)="getCat($event)" (change)="open(content)">
                         <option selected>Choose...</option>
                         <option value="1">Appendectomy</option>
-                        <option value="2">Breast biopsy</option>
-                        <option value="3">Cataract surgery</option>
-                        <option value="4">Cesarean section</option>
+                        <option value="2">Biopsy</option>
+                        <option value="3">Hysterectomy</option>
+                        <option value="4">Cataract surgery</option>    
                         <option value="5">Coronary artery bypass</option>
                         <option value="6">Free skin graft</option>
-                        <option value="7">Hysterectomy</option>
-                        <option value="8">Inguinal hernia repair</option>
-                        <option value="9">Low back pain surgery</option>
-                        <option value="10">Partial colectomy</option>
-                        <option value="11">Prostatectomy</option>
-                        <option value="12">Tonsillectomy</option>
+                        <option value="7">Tonsillectomy</option>
+                        <option value="8">Hernia repair</option>
+                        <option value="9">Back pain surgery</option>
+                        
                     </select>
                 </div>
             </form>
@@ -68,52 +66,15 @@
                         <div class="col-sm-10">
 
 
-                            <div class="form-check">
+                            <div *ngFor="let x of z" class="form-check">
                                 <input type="checkbox" name="checkbox1" (change)="toggleEditable($event)"
-                                    [value]="12345">
+                                    [value]="x">
                                 <label class="form-check-label" for="defaultCheck1">
-                                    Default checkbox
+                                    {{x}}
                                 </label>
                             </div>
 
-                            <div class="form-check">
-                                <input type="checkbox" name="checkbox2" (change)="toggleEditable($event)"
-                                    [value]="6789">
-                                <label class="form-check-label" for="defaultCheck1">
-                                    Default checkbox
-                                </label>
-                            </div>
-
-                            <div class="form-check">
-                                <input type="checkbox" name="checkbox3" (change)="toggleEditable($event)"
-                                    [value]="1011121314">
-                                <label class="form-check-label" for="defaultCheck1">
-                                    Default checkbox
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input type="checkbox" name="checkbox1" (change)="toggleEditable($event)"
-                                    [value]="12345">
-                                <label class="form-check-label" for="defaultCheck1">
-                                    Default checkbox
-                                </label>
-                            </div>
-
-                            <div class="form-check">
-                                <input type="checkbox" name="checkbox2" (change)="toggleEditable($event)"
-                                    [value]="6789">
-                                <label class="form-check-label" for="defaultCheck1">
-                                    Default checkbox
-                                </label>
-                            </div>
-
-                            <div class="form-check">
-                                <input type="checkbox" name="checkbox3" (change)="toggleEditable($event)"
-                                    [value]="1011121314">
-                                <label class="form-check-label" for="defaultCheck1">
-                                    Default checkbox
-                                </label>
-                            </div>
+                           
                         </div>
                     </form>
                 </div>
@@ -130,7 +91,7 @@
             <hr>
 
             <div class="service-container">
-                <p  *ngFor="let x of y" (click)="remove(x.toString())">
+                <p  *ngFor="let x of uniqueChars" (click)="remove(x.toString())">
                     {{x.toString()}}
                 </p>
             </div>
