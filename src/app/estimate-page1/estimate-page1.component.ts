@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
 //import {NgbModal} from '@angular-devkit/build-angular'
 @Component({
   selector: 'app-estimate-page1',
@@ -14,6 +15,9 @@ export class EstimatePage1Component implements OnInit {
   y = [];
   z = []
   uniqueChars = []
+  facility;
+  visit_type;
+
 
   Appendectomy = ['Open Appendectomy', 'Laparoscopic Appendectomy']
   Biopsies = ['Cardiac biopsy', 'Skin biopsy', 'Lymph node biopsy', 'Endoscopic biopsy', 'Punch biopsy', 'breast biopsy']
@@ -26,13 +30,29 @@ export class EstimatePage1Component implements OnInit {
   Back_surgery = ['Discectomy', 'Foraminotomy', 'Nucleoplasty', 'Spinal fusion']
 
 
-  constructor(private modalService: NgbModal) { }
+  constructor(private modalService: NgbModal, private router: Router, private route: ActivatedRoute) {
+
+    
+   }
 
 
   ngOnInit(): void {
     throw new Error('Method not implemented.');
   }
 
+
+
+
+  getValue1(event: any){
+    this.facility = event.target.value;
+    console.log(this.facility)
+
+  }
+  getValue2(event: any){
+    this.visit_type = event.target.value
+    console.log(this.visit_type)
+
+  }
 
   getCat(event: any) {
     //console.log(event.target.value)
@@ -97,6 +117,7 @@ export class EstimatePage1Component implements OnInit {
     //console.log(this.x.toString())
   }
 
+  
 
 
 
@@ -169,5 +190,22 @@ export class EstimatePage1Component implements OnInit {
       return `with: ${reason}`;
     }
   }
+
+ onSelect(){
+
+  const queryParams: any = {};
+  queryParams.myArray = JSON.stringify(this.uniqueChars);
+
+  const navigationExtras: NavigationExtras = {
+    queryParams
+  };
+
+  this.router.navigate(['/two'], navigationExtras)
+ }
+
+ 
+  
+
+
 }
 
