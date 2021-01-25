@@ -13,6 +13,7 @@ import { EstimateThreeComponent } from './estimate-three/estimate-three.componen
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FinalEstimateComponent } from './final-estimate/final-estimate.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { FinalEstimateComponent } from './final-estimate/final-estimate.componen
     ]),
     NgbModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],

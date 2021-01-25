@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
+import { EstimateSubmitService } from '../estimate-submit.service';
 
 
 @Component({
@@ -17,7 +18,7 @@ export class EstimateThreeComponent implements OnInit {
   y = [];
   pass_forward = [];
 
-  constructor(private router: Router, private route: ActivatedRoute) { }
+  constructor(private router: Router, private route: ActivatedRoute, private _submit: EstimateSubmitService) { }
 
   ngOnInit(): void {
 
@@ -85,8 +86,10 @@ export class EstimateThreeComponent implements OnInit {
     const navigationExtras: NavigationExtras = {
       queryParams
     };
-    console.log(this.pass_forward.toString())
+    console.log("Should send to backend")
     //this.router.navigate(['three'], navigationExtras)
+    this._submit.postTransaction(this.pass_forward.toString());
+    
   }
 
 
