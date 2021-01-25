@@ -15,6 +15,7 @@ export class EstimateThreeComponent implements OnInit {
   group_num;
   x = [];
   y = [];
+  pass_forward = [];
 
   constructor(private router: Router, private route: ActivatedRoute) { }
 
@@ -30,18 +31,18 @@ export class EstimateThreeComponent implements OnInit {
     console.log(this.array_of_selected_accounts)
   }
 
-  getValue1(event: any){
+  getValue1(event: any) {
     this.insurance = event.target.value;
     console.log(this.insurance)
 
   }
-  getValue2(event: any){
+  getValue2(event: any) {
     this.member_ID = event.target.value
     console.log(this.member_ID)
 
   }
 
-  getValue3(event: any){
+  getValue3(event: any) {
     this.group_num = event.target.value
     console.log(this.group_num)
 
@@ -50,17 +51,42 @@ export class EstimateThreeComponent implements OnInit {
   toggleEditable(event: any) {
 
     this.x = event.target.value;
-    
-   
+
+
     console.log(this.x.toString())
   }
 
   toggleEditable2(event: any) {
 
     this.y = event.target.value;
-    
-   
+
+
     console.log(this.y.toString())
+  }
+
+  onSelect() {
+
+    console.log('this has been clicked ')
+
+    for (let i = 0; i < this.array_of_selected_accounts.length; i++) {
+
+      this.pass_forward.push(this.array_of_selected_accounts[i])
+    }
+
+    this.pass_forward.push(this.x)
+    this.pass_forward.push(this.insurance)
+    this.pass_forward.push(this.member_ID)
+    this.pass_forward.push(this.group_num)
+    this.pass_forward.push(this.y)
+
+    const queryParams: any = {};
+    queryParams.myArray = JSON.stringify(this.pass_forward);
+
+    const navigationExtras: NavigationExtras = {
+      queryParams
+    };
+    console.log(this.pass_forward.toString())
+    //this.router.navigate(['three'], navigationExtras)
   }
 
 
