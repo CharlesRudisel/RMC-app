@@ -18,6 +18,8 @@ export class EstimatePage1Component implements OnInit {
   facility;
   visit_type;
 
+  send_array = []
+
 
   Appendectomy = ['Open Appendectomy', 'Laparoscopic Appendectomy']
   Biopsies = ['Cardiac biopsy', 'Skin biopsy', 'Lymph node biopsy', 'Endoscopic biopsy', 'Punch biopsy', 'breast biopsy']
@@ -193,8 +195,18 @@ export class EstimatePage1Component implements OnInit {
 
  onSelect(){
 
+  for(let i=0 ; i < this.uniqueChars.length; i++){
+
+    this.send_array.push(this.uniqueChars[i])
+  }
+
+  let u = [this.visit_type, this.facility]
+  //this.send_array.push(this.facility)
+  //this.send_array.push(this.visit_type)
+  this.send_array.push(u)
+
   const queryParams: any = {};
-  queryParams.myArray = JSON.stringify(this.uniqueChars);
+  queryParams.myArray = JSON.stringify(this.send_array);
 
   const navigationExtras: NavigationExtras = {
     queryParams

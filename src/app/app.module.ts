@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {FormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EstimateStartComponent } from './estimate-start/estimate-start.component';
@@ -34,7 +34,8 @@ import { FinalEstimateComponent } from './final-estimate/final-estimate.componen
       {path:'two', component:EstimateTwoComponent}
     ]),
     NgbModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

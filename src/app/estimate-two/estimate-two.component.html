@@ -12,7 +12,7 @@
                 <div class="col-auto my-1">
                     <label class="mr-sm-2" for="inlineFormCustomSelect" style="color:blue; font-weight: 500;">First Name*</label>
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                        placeholder="Enter email">
+                        placeholder="Enter email" (keyup)="keyboardEvent1($event)">
                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
                         else.</small>
                 </div>
@@ -20,7 +20,7 @@
                 <div class="col-auto my-1">
                     <label class="mr-sm-2" for="inlineFormCustomSelect" style="color:blue; font-weight: 500;">Last Name*</label>
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                        placeholder="Enter email">
+                        placeholder="Enter email" (keyup)="keyboardEvent2($event)">
                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
                         else.</small>
                 </div>
@@ -28,8 +28,13 @@
                 <div class="col-auto my-1">
                     <label class="mr-sm-2" for="inlineFormCustomSelect" style="color:blue; font-weight: 500;">Date of Birth*</label>
                     <br>
-                    <input type="text" ngbDatepicker #d="ngbDatepicker" />
-                    <div class="btn btn-success" (click)="d.toggle()" style="height: 20px; padding-bottom: 5%; margin-left:5px">Date</div>
+
+                    
+                    
+                    <input id="datepicker" class="form-control col-7" placeholder="{{dateWording}}" ngbDatepicker #d="ngbDatepicker" 
+                    [(ngModel)]="currentDateObj" name="date" (dateSelect) = "onSelect($event)">
+
+                    <div class="btn btn-success"  (click)="d.toggle()" style="height: 20px; padding-bottom: 5%; margin-left:5px">Date</div>
                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
                         else.</small>
                 </div>
@@ -43,6 +48,7 @@
 
             <div class="service-container">
                 {{array_of_selected_accounts}}
+                {{selectedDate}}
             </div>
 
 
@@ -56,7 +62,7 @@
         </div>
 
 
-        <div class="btn btn-primary" style="margin-top: 5%; margin-left: 500px;" routerLink="/three">
+        <div class="btn btn-primary" style="margin-top: 5%; margin-left: 500px;" (click)="onSelect2()">
             Next
         </div>
     </div>
